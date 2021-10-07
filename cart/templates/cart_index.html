@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+    <link href="cart_index.css" rel="stylesheet">
+</head>
+<body>
+    {% extends "base.html" %}
+    {% load static %}
+    {% block page_content %}
+        <h1>Shopping cart</h1>
+        {% for project in projects %}
+            <div class="card card-margin">
+                  <div class="card-body">
+                      <div class="row">
+                          <img class="card-img-left" src="{% static project.image %}">
+                          <div class="info">
+                              <h5 class="card-title">{{ project.title }}</h5>
+                              <p class="card-text">Description: {{ project.description }}</p>
+                              <p class="card-text">${{ project.price }}</p>
+                              <div class="quantity buttons_added">
+{#	                              <input type="button" value="-" class="minus">#}
+                                  <input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="">
+{#                                  <input type="button" value="+" class="plus">#}
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    {% endblock %}
+
+</body>
+</html>
