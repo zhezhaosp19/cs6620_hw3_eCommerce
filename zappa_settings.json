@@ -1,0 +1,10 @@
+{
+    "dev": {
+        "django_settings": "personal_portfolio.settings",
+        "project_name": "personal-portfo",
+        "profile_name": null,
+        "runtime": "python3.7",
+        "s3_bucket": "zappa-ujufljc9c",
+        "aws_region" : "us-east-1"
+    }
+}

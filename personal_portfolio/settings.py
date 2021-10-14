@@ -30,7 +30,7 @@ STATICFILES_DIRS = [
     "personal_portfolio/static/"
 ]
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'gughpshpc1.execute-api.us-east-1.amazonaws.com']
 
 # Application definition
 
@@ -85,6 +85,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
 
 
 # Password validation
